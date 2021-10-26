@@ -1,0 +1,7 @@
+node_modules
+dist
+debug
+coverage
+.nyc_output
+.vscode
+app/config/app.config.json
