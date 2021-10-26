@@ -5,6 +5,7 @@ import { IoC, TYPES } from './composition/app.composition';
 import { ILogger } from './logger';
 import { RouteError } from './models/route-error';
 import { HealthCheckController } from './controllers/health/health-check.controller';
+import { TodoController } from './controllers/todo/todo.controller';
 
 export class ApiRouter {
   
@@ -24,6 +25,7 @@ export class ApiRouter {
 
   private loadRoutes = () => {
     this.controllers.push(new HealthCheckController(this.app));
+    this.controllers.push(new TodoController(this.app));
   }
 
   private loadErrorHandlers = () => {
